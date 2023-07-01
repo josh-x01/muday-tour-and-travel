@@ -1,0 +1,19 @@
+Design database model
+./models
+config -- database configuration
+review -- comment, rating, placeId, userId
+place -- place info + comments, rating, total star
+user -- user info + favorite places
+
+Schema
+user -- id, firstName, lastName, email, imageUrl
+review -- id, rating, comment,  placeId, userId, reviewData
+place -- id, name, description, coordinates, imageUrl
+category -- id, name
+
+endpoint
+/api/user?id=<userId>
+/api/places
+/api/place?id=<placeId>
+/api
+
