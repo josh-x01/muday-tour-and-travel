@@ -15,6 +15,8 @@ function getPlaces() {
         'id' => $row['id'],
         'name' => $row['name'],
         'description' => $row['description'],
+        'price' => $row['price'],
+        'location' => $row['location'],
         'coordinates' => $row['coordinates'],
         'imageUrl' => $row['imageUrl'],
       ];
@@ -33,6 +35,16 @@ function getPlaces() {
   }
 }
 
+function checkReview($placeId)
+{
+  $review = getReviewByPlaceId($placeId);
+  if ($review["status"] != 200) {
+    return "0";
+  } else {
+    return $review["data"];
+  }
+}
+
 function getPlacesById($id) {
   global $table_name;
   $query = 'SELECT * from ' . $table_name . ' WHERE id = ' . $id;
@@ -42,10 +54,12 @@ function getPlacesById($id) {
       $place = [
         'id' => $row['id'],
         'name' => $row['name'],
+        'price' => $row['price'],
         'description' => $row['description'],
+        'location' => $row['location'],
         'coordinates' => $row['coordinates'],
         'imageUrl' => $row['imageUrl'],
-        'review_info' => getReviewByPlaceId($id)['data']
+        'review_info' => checkReview($id)
       ];
     }
     $response = [
@@ -74,6 +88,8 @@ function getPlacesByCategoryId($categoryId)
         'id' => $row['id'],
         'name' => $row['name'],
         'description' => $row['description'],
+        'price' => $row['price'],
+        'location' => $row['location'],
         'coordinates' => $row['coordinates'],
         'imageUrl' => $row['imageUrl'],
       ];

@@ -12,6 +12,7 @@ function getCategories() {
       $category = [
         'id' => $row['id'],
         'name' => $row['name'],
+        'image' => $row['image'],
       ];
       array_push($data, $category);
     }

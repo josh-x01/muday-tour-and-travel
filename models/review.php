@@ -49,7 +49,10 @@ include_once('user.php');
         ];
       return $response;
     } else {
-      return [];
+    return [
+      "status" => 400,
+      "error" => "0"
+    ];
     }
   }
 
