@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232052097662",
+    "project_id": "mudaytourapp",
+    "storage_bucket": "mudaytourapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232052097662:android:06832feafac2d3f6e1ce2f",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232052097662-h3kgji30rislfjib5vrdt89fn5e178ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeItOriWARrl7G3mZ-LQyEYI7Nfbwxt7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232052097662-h3kgji30rislfjib5vrdt89fn5e178ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
